@@ -1,0 +1,10 @@
+{
+    "arp":true,
+    "interface":"wlan1",
+    "target":null,
+    "gateway":null,
+    "limit":null,
+    "filter":"ip",
+    "filename":null,
+    "verbose":false
+}
