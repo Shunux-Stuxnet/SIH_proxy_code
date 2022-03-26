@@ -1,6 +1,6 @@
 {
     "arp":true,
-    "interface":"wlan1",
+    "interface":"wlxb4b0246ac171",
     "target":null,
     "gateway":null,
     "limit":null,
