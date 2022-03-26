@@ -5,6 +5,6 @@
     "gateway":null,
     "limit":null,
     "filter":"ip",
-    "filename":null,
+    "filename":"connect/connect.pcap",
     "verbose":false
 }

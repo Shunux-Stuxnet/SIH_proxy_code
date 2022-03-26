@@ -266,3 +266,7 @@ class Sniffer:
         print("ARP poisoning Finished.")
         restore_target(gateway_ip, gateway_mac, target_ip, target_mac)
         return
+
+def sniff_main():
+    app=Sniffer()
+    app.run()

@@ -1,4 +1,4 @@
-from src.network.sniffer import Sniffer
+from src.network.sniffer import sniff_main
 
-app = Sniffer()
-app.run()
+if __name__ == "__main__":
+    sniff_main()
