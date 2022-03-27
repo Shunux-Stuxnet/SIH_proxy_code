@@ -2,8 +2,6 @@ from scapy.all import *
 import threading
 import signal
 import sys
-from rich.table import Table
-from rich import print
 
 from src.core.reader import read_json
 protocols = {
@@ -78,6 +76,11 @@ autocomplete = {
     "back":None
 }
 
+# def format_print(packet_count,proto_name,src,svc_guess_local,dst,svc_guess_remote):
+# 
+#  
+    # print(packet_count,proto_name,src,svc_guess_local,dst,svc_guess_remote)
+
 def get_mac(ip_address):
         responses,unanswered = srp(Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst=ip_address),timeout=2,retry=10)
         for s,r in responses:
@@ -98,16 +101,7 @@ def arp_display(packet):
         return "*Response: " + packet[ARP].hwsrc + " has address " + packet[ARP].psrc
 
 def format_print(packet_count,proto_name,src,svc_guess_local,dst,svc_guess_remote):
-    grid = Table.grid(expand=True)
-    grid.add_column()
-    grid.add_column()
-    grid.add_column()
-    grid.add_column()
-    grid.add_column()
-    grid.add_column()
-    grid.add_row(packet_count,proto_name,src,svc_guess_local,dst,svc_guess_remote)
-    print(grid)
-
+   print(packet_count,proto_name,src,svc_guess_local,dst,svc_guess_remote)
 
 
 

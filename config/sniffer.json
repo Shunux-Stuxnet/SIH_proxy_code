@@ -1,10 +1,10 @@
 {
     "arp":true,
-    "interface":"wlxb4b0246ac171",
+    "interface":"wlan0",
     "target":null,
     "gateway":null,
     "limit":null,
     "filter":"ip",
-    "filename":"connect/connect.pcap",
+    "filename":"out/out.pcap",
     "verbose":false
 }
