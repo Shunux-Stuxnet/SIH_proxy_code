@@ -60,22 +60,6 @@ service_guesses = {
     5432: "PostgreSQL"
     }
 
-NAME="network/networksniffer"
-autocomplete = {
-    "set":{
-        "ARP",
-        "INTERFACE",
-        "TARGET",
-        "GATEWAY",
-        "LIMIT",
-        "FILTER",
-        "FILENAME",
-        "VERBOSE"
-    },
-    "run":None,
-    "back":None
-}
-
 # def format_print(packet_count,proto_name,src,svc_guess_local,dst,svc_guess_remote):
 # 
 #  
@@ -221,10 +205,8 @@ class Sniffer:
         else:
             try:
                 if packet.dport in service_guesses.keys():
-                    # in list. convert to likely name
                     svc_guess = service_guesses[packet.dport]
                 else:
-                    # not in list, use port nubmer for later analysis
                     svc_guess = str(packet.dport)
             except AttributeError:
                 svc_guess = None
