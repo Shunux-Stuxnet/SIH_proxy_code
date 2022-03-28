@@ -59,12 +59,6 @@ service_guesses = {
     3306: "MySQL",
     5432: "PostgreSQL"
     }
-
-# def format_print(packet_count,proto_name,src,svc_guess_local,dst,svc_guess_remote):
-# 
-#  
-    # print(packet_count,proto_name,src,svc_guess_local,dst,svc_guess_remote)
-
 def get_mac(ip_address):
         responses,unanswered = srp(Ether(dst="ff:ff:ff:ff:ff:ff")/ARP(pdst=ip_address),timeout=2,retry=10)
         for s,r in responses:
